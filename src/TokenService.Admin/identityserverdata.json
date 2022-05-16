@@ -1,0 +1,244 @@
+﻿{
+  "IdentityServerData": {
+    "IdentityResources": [
+      {
+        "Name": "roles",
+        "Enabled": true,
+        "DisplayName": "Roles",
+        "UserClaims": [
+          "role"
+        ]
+      },
+      {
+        "Name": "openid",
+        "Enabled": true,
+        "Required": true,
+        "DisplayName": "Your user identifier",
+        "UserClaims": [
+          "sub"
+        ]
+      },
+      {
+        "Name": "profile",
+        "Enabled": true,
+        "DisplayName": "User profile",
+        "Description": "Your user profile information (first name, last name, etc.)",
+        "Emphasize": true,
+        "UserClaims": [
+          "name",
+          "family_name",
+          "given_name",
+          "middle_name",
+          "nickname",
+          "preferred_username",
+          "profile",
+          "picture",
+          "website",
+          "gender",
+          "birthdate",
+          "zoneinfo",
+          "locale",
+          "updated_at"
+        ]
+      },
+      {
+        "Name": "email",
+        "Enabled": true,
+        "DisplayName": "Your email address",
+        "Emphasize": true,
+        "UserClaims": [
+          "email",
+          "email_verified"
+        ]
+      },
+      {
+        "Name": "address",
+        "Enabled": true,
+        "DisplayName": "Your address",
+        "Emphasize": true,
+        "UserClaims": [
+          "address"
+        ]
+      }
+    ],
+    "ApiScopes": [
+      {
+        "Name": "STSAdminUIClientId_api",
+        "DisplayName": "STSAdminUIClientId_api",
+        "Required": true,
+        "UserClaims": [
+          "role",
+          "name"
+        ]
+      },
+      {
+        "Name": "app.api.employeeprofile.write",
+        "DisplayName": "app.api.employeeprofile.write",
+        "Required": true,
+        "UserClaims": [
+          "role",
+          "name"
+        ]
+      },
+      {
+        "Name": "app.api.employeeprofile.read",
+        "DisplayName": "app.api.employeeprofile.read",
+        "Required": true,
+        "UserClaims": [
+          "role",
+          "name"
+        ]
+      }
+    ],
+    "ApiResources": [
+      {
+        "Name": "STSAdminUIClientId_api",
+        "Scopes": [
+          "STSAdminUIClientId_api"
+        ]
+      },
+      {
+        "Name": "app.api.employeeprofile",
+        "Scopes": [
+          "app.api.employeeprofile.read"
+        ]
+      }
+    ],
+    "Clients": [
+      {
+        "ClientId": "STSAdminUIClientId",
+        "ClientName": "STSAdminUIClientId",
+        "ClientUri": "https://localhost:44303",
+        "AllowedGrantTypes": [
+          "authorization_code"
+        ],
+        "RequirePkce": true,
+        "ClientSecrets": [
+          {
+            "Value": "STSAdminUISecret"
+          }
+        ],
+        "RedirectUris": [
+          "https://localhost:44303/signin-oidc",
+          "https://cat-token-admin.azurewebsites.net/signin-oidc"
+        ],
+        "FrontChannelLogoutUri": "https://localhost:44303/signout-oidc",
+        "PostLogoutRedirectUris": [
+          "https://localhost:44303/signout-callback-oidc",
+          "https://cat-token-admin.azurewebsites.net/signout-callback-oidc"
+        ],
+        "AllowedCorsOrigins": [
+          "https://localhost:44303",
+          "https://cat-token-admin.azurewebsites.net"
+        ],
+        "AllowedScopes": [
+          "openid",
+          "email",
+          "profile",
+          "roles"
+        ]
+      },
+      {
+        "ClientId": "React.Spa",
+        "ClientName": "React.Spa",
+        "ClientUri": "http://localhost:3000",
+        "AllowedGrantTypes": [
+          "authorization_code"
+        ],
+        "RequirePkce": true,
+        "RequireClientSecret": false,
+        "RedirectUris": [
+          "http://localhost:3000/signin-callback.html",
+          "http://localhost:3000/silentRenew/silentRenew.html"
+        ],
+        "PostLogoutRedirectUris": [
+          "http://localhost:3000"
+        ],
+        "AllowedCorsOrigins": [
+          "http://localhost:3000"
+        ],
+        "AllowedScopes": [
+          "openid",
+          "email",
+          "profile",
+          "roles",
+          "app.api.employeeprofile.read"
+        ]
+      },
+      {
+        "ClientId": "Blazor.Spa",
+        "ClientName": "Blazor WASM Client",
+        "ClientUri": "http://localhost:44369",
+        "AllowedGrantTypes": [
+          "authorization_code"
+        ],
+        "RequirePkce": true,
+        "RequireClientSecret": false,
+        "RedirectUris": [
+          "http://localhost:44369/authentication/login-callback"
+        ],
+        "PostLogoutRedirectUris": [
+          "http://localhost:44369/authentication/logout-callback"
+        ],
+        "AllowedCorsOrigins": [
+          "http://localhost:44369"
+        ],
+        "AllowedScopes": [
+          "openid",
+          "email",
+          "profile",
+          "roles",
+          "app.api.employeeprofile.read"
+        ]
+      },
+      {
+        "ClientId": "AngularStarterKit",
+        "ClientName": "Angular Starter Kit",
+        "ClientUri": "http://localhost:4200",
+        "AllowedGrantTypes": [
+          "authorization_code"
+        ],
+        "RequirePkce": true,
+        "AllowOfflineAccess": true,
+        "RequireClientSecret": false,
+        "RedirectUris": [
+          "http://localhost:4200/auth-callback",
+          "http://localhost:4200/silent-refresh.html"
+        ],
+        "PostLogoutRedirectUris": [
+          "http://localhost:4200"
+        ],
+        "AllowedCorsOrigins": [
+          "http://localhost:4200"
+        ],
+        "AllowedScopes": [
+          "openid",
+          "email",
+          "profile",
+          "roles",
+          "app.api.employeeprofile.read"
+        ]
+      },
+      {
+        "ClientId": "STSAdminUIClientId_api_swaggerui",
+        "ClientName": "STSAdminUIClientId_api_swaggerui",
+        "AllowedGrantTypes": [
+          "authorization_code"
+        ],
+        "RequireClientSecret": false,
+        "RequirePkce": true,
+        "RedirectUris": [
+          "https://localhost:44302/swagger/oauth2-redirect.html",
+          "https://cat-token-adminapi.azurewebsites.net/swagger/oauth2-redirect.html"
+        ],
+        "AllowedScopes": [
+          "STSAdminUIClientId_api"
+        ],
+        "AllowedCorsOrigins": [
+          "https://localhost:44302",
+          "https://cat-token-adminapi.azurewebsites.net"
+        ]
+      }
+    ]
+  }
+}

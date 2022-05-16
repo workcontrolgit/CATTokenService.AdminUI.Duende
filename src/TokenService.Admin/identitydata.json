@@ -1,0 +1,66 @@
+﻿{
+  "IdentityData": {
+    "Roles": [
+      {
+        "Name": "STSAdminRole"
+      },
+      {
+        "Name": "Employee"
+      },
+      {
+        "Name": "Manager"
+      },
+      {
+        "Name": "HRAdmin"
+      }
+    ],
+    "Users": [
+      {
+        "Username": "admin",
+        "Password": "Pa$$word123",
+        "Email": "admin@example.com",
+        "Roles": [
+          "STSAdminRole"
+        ],
+        "Claims": [
+          {
+            "Type": "name",
+            "Value": "admin"
+          }
+        ]
+      },
+      {
+        "Username": "janedoe",
+        "Password": "Pa$$word123",
+        "Email": "janedoe@ethereal.email"
+      },
+      {
+        "Username": "antoinette16",
+        "Password": "Pa$$word123",
+        "Email": "antoinette16@ethereal.email",
+        "Roles": [
+          "Employee"
+        ]
+      },
+      {
+        "Username": "rosamond33",
+        "Password": "Pa$$word123",
+        "Email": "rosamond33@ethereal.email",
+        "Roles": [
+          "Employee",
+          "Manager"
+        ]
+      },
+      {
+        "Username": "ashtyn1",
+        "Password": "Pa$$word123",
+        "Email": "ashtyn1@ethereal.email",
+        "Roles": [
+          "Employee",
+          "Manager",
+          "HRAdmin"
+        ]
+      }
+    ]
+  }
+}
