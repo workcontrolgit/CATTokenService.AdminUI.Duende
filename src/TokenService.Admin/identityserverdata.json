@@ -238,6 +238,24 @@
           "https://localhost:44302",
           "https://cat-token-adminapi.azurewebsites.net"
         ]
+      },
+      {
+        "ClientId": "PostmanClient",
+        "ClientName": "STSAdminUIClientId_api_swaggerui",
+        "AllowedGrantTypes": [
+          "client_credentials"
+        ],
+        "RequireClientSecret": true,
+        "ClientSecrets": [
+          {
+            "Value": "PostmanClientSecret"
+          }
+        ],
+        "RequirePkce": false,
+        "AllowedScopes": [
+          "app.api.employeeprofile.write",
+          "app.api.employeeprofile.read"
+        ]
       }
     ]
   }
