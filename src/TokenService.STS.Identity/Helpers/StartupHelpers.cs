@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Duende.IdentityServer;
 using Duende.IdentityServer.Configuration;
 using Duende.IdentityServer.EntityFramework.Storage;
 using Microsoft.AspNetCore.Authentication;
@@ -16,6 +17,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Azure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -387,6 +389,7 @@ namespace TokenService.STS.Identity.Helpers
         {
             var externalProviderConfiguration = configuration.GetSection(nameof(ExternalProvidersConfiguration)).Get<ExternalProvidersConfiguration>();
 
+            //GitHub
             if (externalProviderConfiguration.UseGitHubProvider)
             {
                 authenticationBuilder.AddGitHub(options =>
@@ -398,17 +401,52 @@ namespace TokenService.STS.Identity.Helpers
                 });
             }
 
+            //Twitter
+            if (externalProviderConfiguration.UseTwitterProvider)
+            {
+                authenticationBuilder.AddTwitter(options =>
+                {
+                    options.ConsumerKey = externalProviderConfiguration.TwitterConsumerId;
+                    options.ConsumerSecret = externalProviderConfiguration.TwitterConsumerSecret;
+                    options.SignInScheme = IdentityConstants.ExternalScheme;
+                });
+            }
+
+            //Google
+            if (externalProviderConfiguration.UseGoogleProvider)
+            {
+                authenticationBuilder.AddGoogle(options =>
+                {
+                    options.ClientId = externalProviderConfiguration.GoogleClientId;
+                    options.ClientSecret = externalProviderConfiguration.GoogleClientSecret;
+                    options.Scope.Add("profile");
+                    options.SignInScheme = IdentityConstants.ExternalScheme; 
+                });
+            }
+
+            //Facebook
+            if (externalProviderConfiguration.UseFacebookProvider)
+            {
+                authenticationBuilder.AddFacebook(options =>
+                {
+                    options.ClientId = externalProviderConfiguration.FacebookClientId;
+                    options.ClientSecret = externalProviderConfiguration.FacebookClientSecret;
+                    options.SignInScheme = IdentityConstants.ExternalScheme;
+                    options.Fields.Add("picture"); // <- Add field picture
+                });
+            }
+
+            //Azure
             if (externalProviderConfiguration.UseAzureAdProvider)
             {
-                authenticationBuilder.AddMicrosoftIdentityWebApp(options =>
-                  {
-                      options.ClientSecret = externalProviderConfiguration.AzureAdSecret;
-                      options.ClientId = externalProviderConfiguration.AzureAdClientId;
-                      options.TenantId = externalProviderConfiguration.AzureAdTenantId;
-                      options.Instance = externalProviderConfiguration.AzureInstance;
-                      options.Domain = externalProviderConfiguration.AzureDomain;
-                      options.CallbackPath = externalProviderConfiguration.AzureAdCallbackPath;
-                  }, cookieScheme: null);
+                authenticationBuilder.AddMicrosoftAccount(options =>
+                {
+                    options.ClientId = externalProviderConfiguration.AzureAdClientId;
+                    options.ClientSecret = externalProviderConfiguration.AzureAdSecret;
+                    options.SignInScheme = IdentityConstants.ExternalScheme;
+                }
+                );
+
             }
         }
 
@@ -503,11 +541,3 @@ namespace TokenService.STS.Identity.Helpers
         }
     }
 }
-
-
-
-
-
-
-
-
