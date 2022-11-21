@@ -7,7 +7,7 @@ namespace TokenService.Shared.Dtos
 {
     public class IdentityUserChangePasswordDto : UserChangePasswordDto<string>
     {
-        
+
     }
 }
 

@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -9,13 +8,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Skoruba.AuditLogging.EntityFramework.Entities;
+using Skoruba.Duende.IdentityServer.Admin.UI.Helpers.ApplicationBuilder;
+using Skoruba.Duende.IdentityServer.Admin.UI.Helpers.DependencyInjection;
+using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
+using System.IdentityModel.Tokens.Jwt;
 using TokenService.Admin.Configuration.Database;
 using TokenService.Admin.EntityFramework.Shared.DbContexts;
 using TokenService.Admin.EntityFramework.Shared.Entities.Identity;
 using TokenService.Admin.Helpers;
-using Skoruba.Duende.IdentityServer.Admin.UI.Helpers.ApplicationBuilder;
-using Skoruba.Duende.IdentityServer.Admin.UI.Helpers.DependencyInjection;
-using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
 using TokenService.Shared.Dtos;
 using TokenService.Shared.Dtos.Identity;
 

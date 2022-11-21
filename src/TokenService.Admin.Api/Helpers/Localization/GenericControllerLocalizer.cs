@@ -4,10 +4,10 @@
 // https://github.com/aspnet/Extensions/blob/master/src/Localization/Abstractions/src/StringLocalizerOfT.cs
 // Modified by Jan Škoruba
 
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Microsoft.Extensions.Localization;
 
 namespace TokenService.Admin.Api.Helpers.Localization
 {

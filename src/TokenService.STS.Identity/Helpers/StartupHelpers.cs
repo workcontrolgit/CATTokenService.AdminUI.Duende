@@ -1,11 +1,6 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using Duende.IdentityServer;
 using Duende.IdentityServer.Configuration;
 using Duende.IdentityServer.EntityFramework.Storage;
 using Microsoft.AspNetCore.Authentication;
@@ -17,12 +12,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Azure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
-using Microsoft.Identity.Web;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.Configuration;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.MySql;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.PostgreSQL;
@@ -31,6 +24,10 @@ using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Helpers;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Interfaces;
 using Skoruba.Duende.IdentityServer.Shared.Configuration.Authentication;
 using Skoruba.Duende.IdentityServer.Shared.Configuration.Configuration.Identity;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using TokenService.STS.Identity.Configuration;
 using TokenService.STS.Identity.Configuration.ApplicationParts;
 using TokenService.STS.Identity.Configuration.Constants;
@@ -396,7 +393,6 @@ namespace TokenService.STS.Identity.Helpers
                 {
                     options.ClientId = externalProviderConfiguration.GitHubClientId;
                     options.ClientSecret = externalProviderConfiguration.GitHubClientSecret;
-                    options.CallbackPath = externalProviderConfiguration.GitHubCallbackPath;
                     options.Scope.Add("user:email");
                 });
             }
@@ -420,7 +416,7 @@ namespace TokenService.STS.Identity.Helpers
                     options.ClientId = externalProviderConfiguration.GoogleClientId;
                     options.ClientSecret = externalProviderConfiguration.GoogleClientSecret;
                     options.Scope.Add("profile");
-                    options.SignInScheme = IdentityConstants.ExternalScheme; 
+                    options.SignInScheme = IdentityConstants.ExternalScheme;
                 });
             }
 
