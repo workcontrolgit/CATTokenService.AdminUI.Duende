@@ -1,9 +1,9 @@
 ﻿// Original SQL scripts for database migration come from: https://github.com/RockSolidKnowledge/IdentityServer4.Migration.Scripts/blob/master/Postgres/ConfigurationDbContext.sql
 // Modified by Jan Škoruba
 
-using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+using System;
 
 namespace TokenService.Admin.EntityFramework.PostgreSQL.Migrations.IdentityServerConfiguration
 {
@@ -30,7 +30,7 @@ namespace TokenService.Admin.EntityFramework.PostgreSQL.Migrations.IdentityServe
             migrationBuilder.DropForeignKey(
                 name: "FK_IdentityProperties_IdentityResources_IdentityResourceId",
                 table: "IdentityProperties");
-            
+
             migrationBuilder.DropIndex(
                 name: "IX_ApiScopes_ApiResourceId",
                 table: "ApiScopes");

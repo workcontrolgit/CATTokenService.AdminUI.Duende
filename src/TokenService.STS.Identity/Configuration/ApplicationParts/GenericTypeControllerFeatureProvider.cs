@@ -1,19 +1,19 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace TokenService.STS.Identity.Configuration.ApplicationParts
 {
     public class GenericTypeControllerFeatureProvider<TUser, TKey> : IApplicationFeatureProvider<ControllerFeature>
-        where TUser : IdentityUser<TKey>        
+        where TUser : IdentityUser<TKey>
         where TKey : IEquatable<TKey>
     {
         public void PopulateFeature(IEnumerable<ApplicationPart> parts, ControllerFeature feature)

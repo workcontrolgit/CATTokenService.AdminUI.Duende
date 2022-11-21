@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
+using System;
+using System.IO;
 
 namespace TokenService.STS.Identity
 {

@@ -4,10 +4,10 @@
 // Original file: https://github.com/DuendeSoftware/IdentityServer.Quickstart.UI
 // Modified by Jan Škoruba
 
+using Skoruba.Duende.IdentityServer.Shared.Configuration.Configuration.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Skoruba.Duende.IdentityServer.Shared.Configuration.Configuration.Identity;
 
 namespace TokenService.STS.Identity.ViewModels.Account
 {

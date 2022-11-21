@@ -1,16 +1,16 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Dtos.Configuration;
+using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Services.Interfaces;
+using System.Threading.Tasks;
 using TokenService.Admin.Api.Configuration.Constants;
 using TokenService.Admin.Api.Dtos.ApiResources;
 using TokenService.Admin.Api.ExceptionHandling;
 using TokenService.Admin.Api.Mappers;
 using TokenService.Admin.Api.Resources;
-using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Dtos.Configuration;
-using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Services.Interfaces;
 
 namespace TokenService.Admin.Api.Controllers
 {
@@ -51,7 +51,7 @@ namespace TokenService.Admin.Api.Controllers
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> Post([FromBody]ApiResourceApiDto apiResourceApi)
+        public async Task<IActionResult> Post([FromBody] ApiResourceApiDto apiResourceApi)
         {
             var apiResourceDto = apiResourceApi.ToApiResourceApiModel<ApiResourceDto>();
 
@@ -67,7 +67,7 @@ namespace TokenService.Admin.Api.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put([FromBody]ApiResourceApiDto apiResourceApi)
+        public async Task<IActionResult> Put([FromBody] ApiResourceApiDto apiResourceApi)
         {
             var apiResourceDto = apiResourceApi.ToApiResourceApiModel<ApiResourceDto>();
 
@@ -87,7 +87,7 @@ namespace TokenService.Admin.Api.Controllers
 
             return Ok();
         }
-        
+
         [HttpGet("{id}/Secrets")]
         public async Task<ActionResult<ApiSecretsApiDto>> GetSecrets(int id, int page = 1, int pageSize = 10)
         {
@@ -109,7 +109,7 @@ namespace TokenService.Admin.Api.Controllers
         [HttpPost("{id}/Secrets")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> PostSecret(int id, [FromBody]ApiSecretApiDto clientSecretApi)
+        public async Task<IActionResult> PostSecret(int id, [FromBody] ApiSecretApiDto clientSecretApi)
         {
             var secretsDto = clientSecretApi.ToApiResourceApiModel<ApiSecretsDto>();
             secretsDto.ApiResourceId = id;
@@ -157,7 +157,7 @@ namespace TokenService.Admin.Api.Controllers
         [HttpPost("{id}/Properties")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> PostProperty(int id, [FromBody]ApiResourcePropertyApiDto apiPropertyApi)
+        public async Task<IActionResult> PostProperty(int id, [FromBody] ApiResourcePropertyApiDto apiPropertyApi)
         {
             var apiResourcePropertiesDto = apiPropertyApi.ToApiResourceApiModel<ApiResourcePropertiesDto>();
             apiResourcePropertiesDto.ApiResourceId = id;

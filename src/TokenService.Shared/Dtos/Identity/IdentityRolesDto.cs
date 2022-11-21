@@ -7,7 +7,7 @@ namespace TokenService.Shared.Dtos.Identity
 {
     public class IdentityRolesDto : RolesDto<IdentityRoleDto, string>
     {
-        
+
     }
 }
 

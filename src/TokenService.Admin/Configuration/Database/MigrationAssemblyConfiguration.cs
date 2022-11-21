@@ -1,12 +1,12 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
+using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.Configuration;
 using System;
 using System.Reflection;
-using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.Configuration;
-using SqlMigrationAssembly = TokenService.Admin.EntityFramework.SqlServer.Helpers.MigrationAssembly;
 using MySqlMigrationAssembly = TokenService.Admin.EntityFramework.MySql.Helpers.MigrationAssembly;
 using PostgreSQLMigrationAssembly = TokenService.Admin.EntityFramework.PostgreSQL.Helpers.MigrationAssembly;
+using SqlMigrationAssembly = TokenService.Admin.EntityFramework.SqlServer.Helpers.MigrationAssembly;
 
 namespace TokenService.Admin.Configuration.Database
 {

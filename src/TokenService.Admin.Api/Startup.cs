@@ -1,9 +1,6 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -13,18 +10,20 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Skoruba.AuditLogging.EntityFramework.Entities;
+using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Extensions;
+using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Identity.Extensions;
+using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
+using System;
+using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using TokenService.Admin.Api.Configuration;
 using TokenService.Admin.Api.Configuration.Authorization;
-using TokenService.Admin.Api.Configuration.Constants;
 using TokenService.Admin.Api.ExceptionHandling;
 using TokenService.Admin.Api.Helpers;
 using TokenService.Admin.Api.Mappers;
 using TokenService.Admin.Api.Resources;
-using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Extensions;
-using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Identity.Extensions;
 using TokenService.Admin.EntityFramework.Shared.DbContexts;
 using TokenService.Admin.EntityFramework.Shared.Entities.Identity;
-using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
 using TokenService.Shared.Dtos;
 using TokenService.Shared.Dtos.Identity;
 

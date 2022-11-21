@@ -2,8 +2,8 @@
 // Licensed under the Apache License, Version 2.0.
 
 using AutoMapper;
-using TokenService.Admin.Api.Dtos.ApiScopes;
 using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Dtos.Configuration;
+using TokenService.Admin.Api.Dtos.ApiScopes;
 
 namespace TokenService.Admin.Api.Mappers
 {

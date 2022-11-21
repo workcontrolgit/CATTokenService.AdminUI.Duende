@@ -2,9 +2,9 @@
 // Licensed under the Apache License, Version 2.0.
 
 using AutoMapper;
+using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Identity.Dtos.Identity;
 using TokenService.Admin.Api.Dtos.Roles;
 using TokenService.Admin.Api.Dtos.Users;
-using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Identity.Dtos.Identity;
 
 namespace TokenService.Admin.Api.Mappers
 {
@@ -14,7 +14,7 @@ namespace TokenService.Admin.Api.Mappers
         where TRoleDto : RoleDto<TKey>
         where TUserRolesDto : UserRolesDto<TRoleDto, TKey>
         where TUserProviderDto : UserProviderDto<TKey>
-        where TUserProvidersDto : UserProvidersDto<TUserProviderDto,TKey>
+        where TUserProvidersDto : UserProvidersDto<TUserProviderDto, TKey>
         where TUserChangePasswordDto : UserChangePasswordDto<TKey>
         where TRoleClaimsDto : RoleClaimsDto<TRoleClaimDto, TKey>
         where TRoleClaimDto : RoleClaimDto<TKey>

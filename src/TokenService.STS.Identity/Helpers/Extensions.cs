@@ -4,9 +4,9 @@
 // Original file: https://github.com/DuendeSoftware/IdentityServer.Quickstart.UI
 // Modified by Jan Škoruba
 
-using System;
 using Duende.IdentityServer.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using TokenService.STS.Identity.ViewModels.Account;
 
 namespace TokenService.STS.Identity.Helpers

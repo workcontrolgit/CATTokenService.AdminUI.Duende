@@ -1,9 +1,6 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using Duende.IdentityServer.EntityFramework.Mappers;
 using Duende.IdentityServer.Models;
 using IdentityModel;
@@ -16,10 +13,13 @@ using Skoruba.AuditLogging.EntityFramework.DbContexts;
 using Skoruba.AuditLogging.EntityFramework.Entities;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.Configuration;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Interfaces;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace TokenService.Admin.EntityFramework.Shared.Helpers
 {
-	public static class DbMigrationHelpers
+    public static class DbMigrationHelpers
     {
         /// <summary>
         /// Generate migrations before running this method, you can use these steps bellow:
@@ -58,7 +58,7 @@ namespace TokenService.Admin.EntityFramework.Shared.Helpers
                     || (applyDbMigrationWithDataSeedFromProgramArguments))
                 {
                     var seedComplete = await EnsureSeedDataAsync<TIdentityServerDbContext, TUser, TRole>(services);
-                    
+
                     return migrationComplete && seedComplete;
                 }
             }

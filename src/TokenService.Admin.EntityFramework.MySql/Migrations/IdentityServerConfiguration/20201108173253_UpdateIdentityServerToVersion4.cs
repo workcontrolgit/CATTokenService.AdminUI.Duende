@@ -1,9 +1,9 @@
 ﻿// Original SQL scripts for database migration come from: https://github.com/RockSolidKnowledge/IdentityServer4.Migration.Scripts/blob/master/MySql/ConfigurationDbContext.sql
 // Modified by Jan Škoruba
 
-using System;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
 namespace TokenService.Admin.EntityFramework.MySql.Migrations.IdentityServerConfiguration
 {
