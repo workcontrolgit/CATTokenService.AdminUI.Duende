@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Duende.IdentityServer.Models;
+﻿using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Validation;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace TokenService.STS.Identity.Helpers
 {

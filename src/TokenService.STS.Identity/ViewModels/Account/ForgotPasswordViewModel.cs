@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Skoruba.Duende.IdentityServer.Shared.Configuration.Configuration.Identity;
+﻿using Skoruba.Duende.IdentityServer.Shared.Configuration.Configuration.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace TokenService.STS.Identity.ViewModels.Account
 {
@@ -7,7 +7,7 @@ namespace TokenService.STS.Identity.ViewModels.Account
     {
         [Required]
         public LoginResolutionPolicy? Policy { get; set; }
-        
+
         [EmailAddress]
         public string Email { get; set; }
 

@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System;
 using Duende.IdentityServer.EntityFramework.Options;
 using IdentityModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -13,17 +12,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.IdentityModel.Tokens;
 using Skoruba.AuditLogging.EntityFramework.DbContexts;
 using Skoruba.AuditLogging.EntityFramework.Entities;
 using Skoruba.AuditLogging.EntityFramework.Extensions;
 using Skoruba.AuditLogging.EntityFramework.Repositories;
 using Skoruba.AuditLogging.EntityFramework.Services;
-using TokenService.Admin.Api.Configuration;
-using TokenService.Admin.Api.Configuration.ApplicationParts;
-using TokenService.Admin.Api.Configuration.AuditLogging;
-using TokenService.Admin.Api.Configuration.Constants;
-using TokenService.Admin.Api.Helpers.Localization;
 using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Identity.Dtos.Identity;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.Configuration;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.MySql;
@@ -31,6 +24,12 @@ using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.PostgreS
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.SqlServer;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Helpers;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Interfaces;
+using System;
+using TokenService.Admin.Api.Configuration;
+using TokenService.Admin.Api.Configuration.ApplicationParts;
+using TokenService.Admin.Api.Configuration.AuditLogging;
+using TokenService.Admin.Api.Configuration.Constants;
+using TokenService.Admin.Api.Helpers.Localization;
 
 namespace TokenService.Admin.Api.Helpers
 {

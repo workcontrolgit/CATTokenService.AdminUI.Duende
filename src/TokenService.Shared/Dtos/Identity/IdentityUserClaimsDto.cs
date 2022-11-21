@@ -7,7 +7,7 @@ namespace TokenService.Shared.Dtos.Identity
 {
     public class IdentityUserClaimsDto : UserClaimsDto<IdentityUserClaimDto, string>
     {
-        
+
     }
 }
 

@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Skoruba.AuditLogging.EntityFramework.DbContexts;
 using Skoruba.AuditLogging.EntityFramework.Entities;
+using System.Threading.Tasks;
 
 namespace TokenService.Admin.EntityFramework.Shared.DbContexts
 {

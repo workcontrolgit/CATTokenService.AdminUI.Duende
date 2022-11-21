@@ -1,15 +1,15 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Identity.Services.Interfaces;
+using System.Threading.Tasks;
 using TokenService.Admin.Api.Configuration.Constants;
 using TokenService.Admin.Api.Dtos.PersistedGrants;
 using TokenService.Admin.Api.ExceptionHandling;
 using TokenService.Admin.Api.Helpers;
 using TokenService.Admin.Api.Mappers;
-using Skoruba.Duende.IdentityServer.Admin.BusinessLogic.Identity.Services.Interfaces;
 
 namespace TokenService.Admin.Api.Controllers
 {

@@ -1,23 +1,23 @@
 ﻿// Copyright (c) Jan Škoruba. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Skoruba.Duende.IdentityServer.Admin.EntityFramework.Configuration.Configuration;
+using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
+using System;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using TokenService.Admin.EntityFramework.Shared.DbContexts;
 using TokenService.Admin.EntityFramework.Shared.Entities.Identity;
 using TokenService.Admin.EntityFramework.Shared.Helpers;
-using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
 
 namespace TokenService.Admin
 {
-	public class Program
+    public class Program
     {
         private const string SeedArgs = "/seed";
         private const string MigrateOnlyArgs = "/migrateonly";

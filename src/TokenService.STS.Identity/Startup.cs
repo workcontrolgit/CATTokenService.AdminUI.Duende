@@ -1,14 +1,14 @@
-﻿using System;
-using HealthChecks.UI.Client;
+﻿using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
+using System;
 using TokenService.Admin.EntityFramework.Shared.DbContexts;
 using TokenService.Admin.EntityFramework.Shared.Entities.Identity;
-using Skoruba.Duende.IdentityServer.Shared.Configuration.Helpers;
 using TokenService.STS.Identity.Configuration;
 using TokenService.STS.Identity.Configuration.Constants;
 using TokenService.STS.Identity.Configuration.Interfaces;
