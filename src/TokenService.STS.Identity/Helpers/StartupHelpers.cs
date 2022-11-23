@@ -430,12 +430,12 @@ namespace TokenService.STS.Identity.Helpers
             }
 
             //Azure
-            if (externalProviderConfiguration.UseAzureAdProvider)
+            if (externalProviderConfiguration.UseMicrosoftProvider)
             {
                 authenticationBuilder.AddMicrosoftAccount(options =>
                 {
-                    options.ClientId = externalProviderConfiguration.AzureAdClientId;
-                    options.ClientSecret = externalProviderConfiguration.AzureAdSecret;
+                    options.ClientId = externalProviderConfiguration.MicrosoftClientId;
+                    options.ClientSecret = externalProviderConfiguration.MicrosoftClientSecret;
                 }
                 );
 
