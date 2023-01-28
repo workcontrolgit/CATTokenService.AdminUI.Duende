@@ -203,13 +203,17 @@
         "RequireClientSecret": false,
         "RedirectUris": [
           "http://localhost:4200",
-          "http://localhost:4200/silent-refresh.html"
+          "http://localhost:4200/silent-refresh.html",
+          "https://localhost:4200",
+          "https://localhost:4200/silent-refresh.html"
         ],
         "PostLogoutRedirectUris": [
-          "http://localhost:4200"
+          "http://localhost:4200",
+          "https://localhost:4200"
         ],
         "AllowedCorsOrigins": [
-          "http://localhost:4200"
+          "http://localhost:4200",
+          "https://localhost:4200"
         ],
         "AllowedScopes": [
           "openid",
