@@ -404,7 +404,6 @@ namespace TokenService.STS.Identity.Helpers
                 {
                     options.ConsumerKey = externalProviderConfiguration.TwitterConsumerId;
                     options.ConsumerSecret = externalProviderConfiguration.TwitterConsumerSecret;
-                    options.SignInScheme = IdentityConstants.ExternalScheme;
                 });
             }
 
@@ -416,7 +415,6 @@ namespace TokenService.STS.Identity.Helpers
                     options.ClientId = externalProviderConfiguration.GoogleClientId;
                     options.ClientSecret = externalProviderConfiguration.GoogleClientSecret;
                     options.Scope.Add("profile");
-                    options.SignInScheme = IdentityConstants.ExternalScheme;
                 });
             }
 
@@ -427,19 +425,17 @@ namespace TokenService.STS.Identity.Helpers
                 {
                     options.ClientId = externalProviderConfiguration.FacebookClientId;
                     options.ClientSecret = externalProviderConfiguration.FacebookClientSecret;
-                    options.SignInScheme = IdentityConstants.ExternalScheme;
                     options.Fields.Add("picture"); // <- Add field picture
                 });
             }
 
             //Azure
-            if (externalProviderConfiguration.UseAzureAdProvider)
+            if (externalProviderConfiguration.UseMicrosoftProvider)
             {
                 authenticationBuilder.AddMicrosoftAccount(options =>
                 {
-                    options.ClientId = externalProviderConfiguration.AzureAdClientId;
-                    options.ClientSecret = externalProviderConfiguration.AzureAdSecret;
-                    options.SignInScheme = IdentityConstants.ExternalScheme;
+                    options.ClientId = externalProviderConfiguration.MicrosoftClientId;
+                    options.ClientSecret = externalProviderConfiguration.MicrosoftClientSecret;
                 }
                 );
 

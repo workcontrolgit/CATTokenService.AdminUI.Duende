@@ -17,8 +17,8 @@ namespace TokenService.STS.Identity.Configuration
         public bool UseFacebookProvider { get; set; }
         public string FacebookClientId { get; set; }
         public string FacebookClientSecret { get; set; }
-        public bool UseAzureAdProvider { get; set; }
-        public string AzureAdClientId { get; set; }
-        public string AzureAdSecret { get; set; }
+        public bool UseMicrosoftProvider { get; set; }
+        public string MicrosoftClientId { get; set; }
+        public string MicrosoftClientSecret { get; set; }
     }
 }

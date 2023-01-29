@@ -192,6 +192,38 @@
         ]
       },
       {
+        "ClientId": "TalentManagement",
+        "ClientName": "Talent Management Demo Angular App",
+        "ClientUri": "http://localhost:4200",
+        "AllowedGrantTypes": [
+          "authorization_code"
+        ],
+        "RequirePkce": true,
+        "AllowOfflineAccess": true,
+        "RequireClientSecret": false,
+        "RedirectUris": [
+          "http://localhost:4200",
+          "http://localhost:4200/silent-refresh.html",
+          "https://localhost:4200",
+          "https://localhost:4200/silent-refresh.html"
+        ],
+        "PostLogoutRedirectUris": [
+          "http://localhost:4200",
+          "https://localhost:4200"
+        ],
+        "AllowedCorsOrigins": [
+          "http://localhost:4200",
+          "https://localhost:4200"
+        ],
+        "AllowedScopes": [
+          "openid",
+          "email",
+          "profile",
+          "roles",
+          "app.api.employeeprofile.read"
+        ]
+      },
+      {
         "ClientId": "AngularStarterKit",
         "ClientName": "Angular Starter Kit",
         "ClientUri": "http://localhost:4200",
