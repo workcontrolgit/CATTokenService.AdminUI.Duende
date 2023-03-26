@@ -175,13 +175,16 @@
         "RequirePkce": true,
         "RequireClientSecret": false,
         "RedirectUris": [
-          "http://localhost:44369/authentication/login-callback"
+          "http://localhost:44369/authentication/login-callback",
+          "https://localhost:44369/authentication/login-callback"
         ],
         "PostLogoutRedirectUris": [
-          "http://localhost:44369/authentication/logout-callback"
+          "http://localhost:44369/authentication/logout-callback",
+          "https://localhost:44369/authentication/logout-callback"
         ],
         "AllowedCorsOrigins": [
-          "http://localhost:44369"
+          "http://localhost:44369",
+          "https://localhost:44369"
         ],
         "AllowedScopes": [
           "openid",
