@@ -117,7 +117,7 @@ namespace TokenService.STS.Identity.Controllers
             {
                 if (context != null)
                 {
-                    // if the user cancels, send a result back into IdentityServer as if they 
+                    // if the user cancels, send a result back into IdentityServer as if they
                     // denied the consent (even if this client does not require consent).
                     // this will send back an access denied OIDC error response to the client.
                     await _interaction.DenyAuthorizationAsync(context, AuthorizationError.AccessDenied);
@@ -193,7 +193,6 @@ namespace TokenService.STS.Identity.Controllers
             var vm = await BuildLoginViewModelAsync(model);
             return View(vm);
         }
-
 
         /// <summary>
         /// Show logout page
@@ -298,6 +297,7 @@ namespace TokenService.STS.Identity.Controllers
                             user = null;
                         }
                         break;
+
                     case LoginResolutionPolicy.Username:
                         try
                         {
@@ -677,6 +677,7 @@ namespace TokenService.STS.Identity.Controllers
         /*****************************************/
         /* helper APIs for the AccountController */
         /*****************************************/
+
         private IActionResult RedirectToLocal(string returnUrl)
         {
             if (Url.IsLocalUrl(returnUrl))
@@ -824,11 +825,3 @@ namespace TokenService.STS.Identity.Controllers
         }
     }
 }
-
-
-
-
-
-
-
-
