@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TokenService.Admin.EntityFramework.Shared.DbContexts;
 
@@ -11,9 +12,10 @@ using TokenService.Admin.EntityFramework.Shared.DbContexts;
 namespace TokenService.Admin.EntityFramework.SqlServer.Migrations.IdentityServerConfiguration
 {
     [DbContext(typeof(IdentityServerConfigurationDbContext))]
-    partial class IdentityServerConfigurationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240730030441_UpdateToIS61")]
+    partial class UpdateToIS61
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
